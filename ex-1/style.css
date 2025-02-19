@@ -64,7 +64,7 @@ h3 {
 
 .categories {
   max-width: 1900px;
-  min-width: 450px;
+  /* min-width: 450px; */
   width: 100vw;
   height: 50vh;
 }
@@ -168,3 +168,51 @@ h3 {
 }
 
 /* Start coding here */
+/* Responsive Design for screens lower than 375px */
+@media only screen and (max-width: 375px) {
+
+/* ปรับ container หลักไม่ให้กว้างเกินขนาด */
+.categories {
+    max-width: 100%; /* ✅ ทำให้ไม่เกินขอบของหน้าจอ */
+    min-width: auto;
+    padding: 0; /* ✅ ลด padding ให้พอดี */
+    box-sizing: border-box;
+}
+
+  .row-1,
+  .row-2 {
+      flex-direction: column; /* ✅ Change to column */
+      align-items: center; /* ✅ Center align items */
+  }
+
+  .job-item,
+  .job-more {
+      width: 333px; /* ✅ Adjust width for small screens */
+      margin: 10px 0; /*✅ Reduce margin */
+      overflow: hidden; /* ✅ Hide overflow */
+  }
+
+  h2 {
+      font-size: 1.1rem; /* ✅ Adjust font size for readability */
+      top: 150px;
+      left: 20px;
+  }
+
+  h4 {
+      font-size: 0.9rem;
+      top: 190px;
+      left: 20px;
+  }
+
+  .arrow {
+      top: 190px;
+      left: 85%;
+      transform: translateX(-50%);
+  }
+
+  .explore-more-arrow {
+      top: 120px;
+      left: 85%;
+      transform: translateX(-50%);
+  }
+}
